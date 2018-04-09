@@ -18,7 +18,7 @@ namespace CustomListTests
             hello.Add("world");
             actual = hello[0];
             //Assert
-            Assert.AreEqual(expected, actual[0]);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
