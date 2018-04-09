@@ -9,13 +9,17 @@ namespace CustomList
 {
      public class CustomList<T> : IEnumerable<T>
     {
-        private T[] currentArray = new T[4];
+        private T[] currentArray;
+        private T[] temporaryArray;
+        private int capacity;
         private int count;
 
-        //public void Customlist(T value)
-        //{
-        //    this.value = value;
-        //}
+        public CustomList()
+        {
+            capacity = 5;
+
+            currentArray = new T[capacity];
+        }
 
         public T this[int index]
         {
@@ -26,6 +30,14 @@ namespace CustomList
             set
             {
                 currentArray[index] = value;
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return count;
             }
         }
 
@@ -41,12 +53,42 @@ namespace CustomList
 
         public void Add(T element)
         {
-            this.currentArray[count++] = element;
+            if (count >= capacity)
+            {
+                Console.WriteLine("Red alert, capacity is 0");
+                // make temporary array to copy data
+                capacity *= 2;
+                temporaryArray = new T[capacity];
+                int temporaryIndex = 0;
+                // copy currentArray to temporaryArray
+                foreach (var c in currentArray)
+                {
+                    temporaryArray[temporaryIndex] = c;
+                    temporaryIndex++;
+                }
+
+                foreach (var t in temporaryArray)
+                {
+                    Console.WriteLine(t);
+                }
+                
+                // make new array with increased capacity
+                
+            }
+            else
+            {
+                currentArray[count] = element;
+                count++;
+            }   
         }
 
-        //public void Length()
-        //{
-        //    private int 
-        //}
+        public void ExpandArray()
+        {
+            foreach (var a in currentArray)
+            {
+                Console.WriteLine(a);
+            }
+        }
+
     }
 }
