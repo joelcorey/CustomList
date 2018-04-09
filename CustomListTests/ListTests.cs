@@ -21,5 +21,9 @@ namespace CustomListTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        //check index
+
+        //check count
     }
 }
