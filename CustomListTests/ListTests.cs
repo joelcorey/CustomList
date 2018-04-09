@@ -5,18 +5,20 @@ using CustomList;
 namespace CustomListTests
 {
     [TestClass]
-    public class UnitTest1
+    public class ListTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Add_AddToList_AddToListSuccess()
         {
-            CList<string> items = new CList<string>();
+            CustomList<string> hello = new CustomList<string>();
             //Arrange
-
+            string expected = "world";
+            string actual;
             //Act
-
+            hello.Add("world");
+            actual = hello[0];
             //Assert
-
+            Assert.AreEqual(expected, actual[0]);
         }
     }
 }

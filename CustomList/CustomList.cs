@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,40 +7,29 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable<T>
     {
-        private T value;
+        private T[] newArray = new T[4];
+        private int count;
 
-        public void Clist(T value)
+        //public void Customlist(T value)
+        //{
+        //    this.value = value;
+        //}
+
+        public void Add(T element)
         {
-            this.value = value;
+            this.newArray[count++] = element;
         }
 
-        public T Value
+        public IEnumerator<T> GetEnumerator()
         {
-            get
-            {
-                return this.value;
-            }
-            set
-            {
-                this.Value = value;
-            }
+            return newArray.Take(count).GetEnumerator();
         }
 
-        public void Add(ref T value)
+        IEnumerator IEnumerable.GetEnumerator()
         {
-
-        }
-
-        public int Count(T value)
-        {
-            int count = 0;
-            foreach (T v in value)
-            {
-
-            }
-            return count;
+            return GetEnumerator();
         }
     }
 }

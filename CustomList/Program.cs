@@ -27,6 +27,18 @@ namespace CustomList
             //use C# best practices, SOLID design principles, and good naming conventions on the project. 
             //BONUS: ability to sort an instance of my custom-built list class. To be eligible for the bonus points, you may not use Array.Sort() that is already built in and you must tell us what sorting algorithm you used.
             //BONUS: ability to earn bonus points for an EASTER EGG user story, regarding implementing a specific good practice on one of the above methods specified in a user story above.
+
+            List<int> derp = new List<int>();
+            derp.Add(1);
+            derp.Add(2);
+            derp.Add(3);
+            derp.Add(4);
+            
+            foreach (var d in derp)
+            {
+                Console.WriteLine(d);
+            }
+            Console.ReadLine();
         }
     }
 }
