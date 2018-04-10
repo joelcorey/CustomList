@@ -10,7 +10,7 @@ namespace CustomList
      public class CustomList<T> : IEnumerable<T>
     {
         private T[] currentArray;
-        private T[] stagingArray;
+        //private T[] stagingArray;
         private int capacity;
         private int count;
 
@@ -64,7 +64,7 @@ namespace CustomList
         public void ResizeArray()
         {
             capacity *= 2;
-            stagingArray = new T[capacity];
+            T[] stagingArray = new T[capacity];
             CopyArray(count - 1, stagingArray, currentArray);
             currentArray = stagingArray;
         }

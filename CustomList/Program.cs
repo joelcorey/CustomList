@@ -28,13 +28,14 @@ namespace CustomList
             //BONUS: ability to sort an instance of my custom-built list class. To be eligible for the bonus points, you may not use Array.Sort() that is already built in and you must tell us what sorting algorithm you used.
             //BONUS: ability to earn bonus points for an EASTER EGG user story, regarding implementing a specific good practice on one of the above methods specified in a user story above.
 
+            Random random = new Random();
+
             CustomList<int> testList = new CustomList<int>();
-            testList.Add(1);
-            testList.Add(2);
-            testList.Add(3);
-            testList.Add(4);
-            testList.Add(5);
-            testList.Add(6);
+            
+            for (int i = 1; i <= 100; i++)
+            {
+                testList.Add(i);
+            }
 
             foreach (var t in testList)
             {
