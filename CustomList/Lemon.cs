@@ -8,5 +8,19 @@ namespace CustomList
 {
     class Lemon
     {
+        private int value;
+
+        public Lemon(Random random)
+        {
+            this.value = random.Next(1, 100);
+        }
+
+        public int Value
+        {
+            get
+            {
+                return value;
+            }
+        }
     }
 }

@@ -31,20 +31,28 @@ namespace CustomList
             Random random = new Random();
 
             CustomList<int> testList = new CustomList<int>();
-            
-            for (int i = 1; i <= 100; i++)
+            CustomList<Lemon> lemonList = new CustomList<Lemon>();
+
+            for (int i = 0; i <= 4; i++)
             {
-                testList.Add(i);
+                Lemon lemon = new Lemon(random);
+                lemonList.Add(lemon);
             }
 
-            foreach (var t in testList)
+            foreach (var lemon in lemonList)
             {
-                Console.WriteLine(t);
+                Console.WriteLine(lemon.Value);
+            }
+
+            lemonList.Remove(0);
+            Console.WriteLine("--");
+
+            foreach (var lemon in lemonList)
+            {
+                Console.WriteLine(lemon.Value);
             }
 
             //Console.WriteLine(testList.Count);
-
-
 
             Console.ReadLine();
         }

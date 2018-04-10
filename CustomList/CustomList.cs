@@ -61,6 +61,21 @@ namespace CustomList
             count++;
         }
 
+        public void Remove(int remove)
+        {
+            T[] stagingArray = new T[count - 1];
+            int stagingCount = 0;
+            for (int i = 0; i < count; i++)
+            {
+                if (i != remove)
+                {
+                    stagingArray[stagingCount] = currentArray[i];
+                    stagingCount++;
+                }
+            }
+            currentArray = stagingArray;
+        }
+
         public void ResizeArray()
         {
             capacity *= 2;
@@ -79,6 +94,8 @@ namespace CustomList
                 }
             }
         }
+
+        
 
         
 
