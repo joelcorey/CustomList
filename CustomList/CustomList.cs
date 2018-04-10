@@ -66,8 +66,7 @@ namespace CustomList
             capacity *= 2;
             stagingArray = new T[capacity];
             CopyArray(count - 1, stagingArray, currentArray);
-            currentArray = new T[capacity];
-            CopyArray(capacity - 1, currentArray, stagingArray);
+            currentArray = stagingArray;
         }
 
         public void CopyArray(int limit, T[] destinationArray, T[] sourceArray)
@@ -80,8 +79,6 @@ namespace CustomList
                 }
             }
         }
-
-
 
         public void ExpandArray()
         {
