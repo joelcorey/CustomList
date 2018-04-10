@@ -80,13 +80,7 @@ namespace CustomList
             }
         }
 
-        public void ExpandArray()
-        {
-            foreach (var a in currentArray)
-            {
-                Console.WriteLine(a);
-            }
-        }
+        
 
     }
 }
