@@ -10,7 +10,7 @@ namespace CustomList
      public class CustomList<T> : IEnumerable<T>
     {
         private T[] currentArray;
-        private T[] temporaryArray;
+        private T[] stagingArray;
         private int capacity;
         private int count;
 
@@ -55,32 +55,33 @@ namespace CustomList
         {
             if (count >= capacity)
             {
-                Console.WriteLine("Red alert, capacity is 0");
-                // make temporary array to copy data
-                capacity *= 2;
-                temporaryArray = new T[capacity];
-                int temporaryIndex = 0;
-                // copy currentArray to temporaryArray
-                foreach (var c in currentArray)
-                {
-                    temporaryArray[temporaryIndex] = c;
-                    temporaryIndex++;
-                }
-
-                foreach (var t in temporaryArray)
-                {
-                    Console.WriteLine(t);
-                }
-                
-                // make new array with increased capacity
-                
+                ResizeArray();
             }
-            else
-            {
-                currentArray[count] = element;
-                count++;
-            }   
+            currentArray[count] = element;
+            count++;
         }
+
+        public void ResizeArray()
+        {
+            capacity *= 2;
+            stagingArray = new T[capacity];
+            CopyArray(count - 1, stagingArray, currentArray);
+            currentArray = new T[capacity];
+            CopyArray(capacity - 1, currentArray, stagingArray);
+        }
+
+        public void CopyArray(int limit, T[] destinationArray, T[] sourceArray)
+        {
+            for (int i = 0; i <= limit; i++)
+            {
+                if (i <= limit)
+                {
+                     destinationArray[i] = sourceArray[i];
+                }
+            }
+        }
+
+
 
         public void ExpandArray()
         {
