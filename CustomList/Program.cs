@@ -30,8 +30,13 @@ namespace CustomList
 
             Random random = new Random();
 
-            CustomList<int> lemonList = new CustomList<int>();
+            CustomList<int> testList = new CustomList<int>();
             CustomList<Lemon> lemonList = new CustomList<Lemon>();
+
+            for (int i = 0; i <= 4; i++)
+            {
+                testList.Add(i);
+            }
 
             for (int i = 0; i <= 4; i++)
             {
@@ -41,7 +46,7 @@ namespace CustomList
 
             
 
-            Console.WriteLine(lemonList.ToString);
+            Console.WriteLine(testList.ToString());
 
             Console.ReadLine();
         }
