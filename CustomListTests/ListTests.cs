@@ -22,19 +22,23 @@ namespace CustomListTests
             Assert.AreEqual(expected, actual);
         }
 
-        //check index
-        //[TestMethod]
-        //public void Add_AddToList_VerifyIndex()
-        //{
-        //    CustomList<int> testList = new CustomList<int>();
-        //    //Arrange
-        //    int expected;
-        //    int actual;
-        //    //Act
-
-        //    //Assert
-            
-        //}
+        // check capacity
+        [TestMethod]
+        public void Add_AddToList_VerifyCapcityDoubles()
+        {
+            CustomList<int> testList = new CustomList<int>();
+            //Arrange
+            int expected = 10;
+            int actual;
+            //Act
+            for (int i = 0; i < 6; i++)
+            {
+                testList.Add(i);
+            }
+            actual = testList.Capacity;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
 
         //check count
         [TestMethod]

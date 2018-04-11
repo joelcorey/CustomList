@@ -10,7 +10,6 @@ namespace CustomList
      public class CustomList<T> : IEnumerable<T>
     {
         private T[] currentArray;
-        //private T[] stagingArray;
         private int capacity;
         private int count;
 
@@ -38,6 +37,14 @@ namespace CustomList
             get
             {
                 return count;
+            }
+        }
+
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
             }
         }
 
