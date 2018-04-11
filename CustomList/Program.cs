@@ -44,7 +44,9 @@ namespace CustomList
                 lemonList.Add(lemon);
             }
 
-            
+            Console.WriteLine("0: " + lemonList[0].Value);
+
+            lemonList.Remove(0);
 
             Console.WriteLine(testList.ToString());
 
