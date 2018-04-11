@@ -108,7 +108,14 @@ namespace CustomList
             return retVal;
         }
 
-
+        public static CustomList<T> operator +(CustomList<T> customList1, CustomList<T> customList2)
+        {
+            foreach (var item in customList2)
+            {
+                customList1.Add(item);
+            }
+            return customList1;
+        }
 
 
     }

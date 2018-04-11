@@ -31,25 +31,27 @@ namespace CustomList
             Random random = new Random();
 
             CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
             CustomList<Lemon> lemonList = new CustomList<Lemon>();
+            CustomList<int> combinedlist;
 
             for (int i = 0; i <= 4; i++)
             {
                 testList.Add(i);
+                testList2.Add(i);
             }
+            //for (int i = 0; i <= 4; i++)
+            //{
+            //    Lemon lemon = new Lemon(random);
+            //    lemonList.Add(lemon);
+            //}
 
-            for (int i = 0; i <= 4; i++)
-            {
-                Lemon lemon = new Lemon(random);
-                lemonList.Add(lemon);
-            }
+            //Console.WriteLine("0: " + lemonList[0].Value);
+            //lemonList.Remove(0);
+            //Console.WriteLine(testList.ToString());
 
-            Console.WriteLine("0: " + lemonList[0].Value);
-
-            lemonList.Remove(0);
-
-            Console.WriteLine(testList.ToString());
-
+            combinedlist = testList + testList2;
+            Console.WriteLine(combinedlist);
             Console.ReadLine();
         }
     }
