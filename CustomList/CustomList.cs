@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-     public class CustomList<T> : IEnumerable<T>
+     public class CustomList<T> : IEnumerable<T>, IComparable<T>
     {
         private T[] currentArray;
         private int capacity;
@@ -16,7 +16,6 @@ namespace CustomList
         public CustomList()
         {
             capacity = 5;
-
             currentArray = new T[capacity];
         }
 
@@ -30,6 +29,16 @@ namespace CustomList
             {
                 currentArray[index] = value;
             }
+        }
+
+        public int CompareTo(T other)
+        {
+        // compare index value of this.something to other.something? how?
+        // how do you use the indexer with compareto from IComparable<T> to determine which array member is greater than
+        // how do i access the indexer in the compareto method in order to compare two arrays?
+
+        
+        return 1;
         }
 
         public int Count
@@ -47,6 +56,8 @@ namespace CustomList
                 return capacity;
             }
         }
+
+        public int indexer { get; private set; }
 
         public IEnumerator<T> GetEnumerator()
         {
@@ -115,6 +126,8 @@ namespace CustomList
             return retVal;
         }
 
+        
+
         public static CustomList<T> operator +(CustomList<T> customList1, CustomList<T> customList2)
         {
             foreach (var item in customList2)
@@ -124,6 +137,12 @@ namespace CustomList
             return customList1;
         }
 
-
+        public static CustomList<T> operator -(CustomList<T> customList1, CustomList<T> customList2)
+        {
+            //TODO if else for comparing which list is longer? ..
+            
+            
+            return customList1;
+        }
     }
 }

@@ -34,6 +34,7 @@ namespace CustomList
             CustomList<int> testList2 = new CustomList<int>();
             CustomList<Lemon> lemonList = new CustomList<Lemon>();
             CustomList<int> combinedlist;
+            CustomList<int> subtractList;
 
             for (int i = 0; i <= 4; i++)
             {
@@ -51,7 +52,8 @@ namespace CustomList
             //Console.WriteLine(testList.ToString());
 
             combinedlist = testList + testList2;
-            Console.WriteLine(combinedlist);
+            subtractList = testList - testList2;
+            Console.WriteLine(subtractList);
             Console.ReadLine();
         }
     }
