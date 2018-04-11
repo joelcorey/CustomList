@@ -73,6 +73,7 @@ namespace CustomList
                     stagingCount++;
                 }
             }
+            count = stagingCount;
             currentArray = stagingArray;
         }
 
@@ -94,10 +95,21 @@ namespace CustomList
                 }
             }
         }
+        public override String ToString()
+        {
+            String retVal = String.Empty;
+            foreach (T item in this)
+            {
+                if (String.IsNullOrEmpty(retVal))
+                    retVal += item.ToString();
+                else
+                    retVal += String.Format(", {0}", item);
+            }
+            return retVal;
+        }
 
-        
 
-        
+
 
     }
 }

@@ -30,7 +30,7 @@ namespace CustomList
 
             Random random = new Random();
 
-            CustomList<int> testList = new CustomList<int>();
+            CustomList<int> lemonList = new CustomList<int>();
             CustomList<Lemon> lemonList = new CustomList<Lemon>();
 
             for (int i = 0; i <= 4; i++)
@@ -39,20 +39,9 @@ namespace CustomList
                 lemonList.Add(lemon);
             }
 
-            foreach (var lemon in lemonList)
-            {
-                Console.WriteLine(lemon.Value);
-            }
+            
 
-            lemonList.Remove(0);
-            Console.WriteLine("--");
-
-            foreach (var lemon in lemonList)
-            {
-                Console.WriteLine(lemon.Value);
-            }
-
-            //Console.WriteLine(testList.Count);
+            Console.WriteLine(lemonList.ToString);
 
             Console.ReadLine();
         }
