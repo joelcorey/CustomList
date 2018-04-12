@@ -135,9 +135,7 @@ namespace CustomList
                     returnValue += String.Format(", {0}", item);
             }
             return returnValue;
-        }
-
-        
+        }     
 
         public static CustomList<T> operator +(CustomList<T> customList1, CustomList<T> customList2)
         {
@@ -151,8 +149,6 @@ namespace CustomList
         public static CustomList<T> operator -(CustomList<T> customList1, CustomList<T> customList2)
         {
             //TODO if else for comparing which list is longer? ..
-            
-            
             return customList1;
         }
     }

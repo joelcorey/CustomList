@@ -73,7 +73,7 @@ namespace CustomListTests
         }
 
         [TestMethod]
-        public void ToString_ConvertIntToString_SuccessfullyConvertToString()
+        public void ToString_ConvertIntToString_IntToStringSuccess()
         {
             CustomList<int> testList = new CustomList<int>();
             //Arrange
@@ -89,7 +89,7 @@ namespace CustomListTests
         }
 
         [TestMethod]
-        public void ToString_ConvertIntToString_ConvertToStringSuccesComapedToNonString()
+        public void ToString_ConvertIntToString_IntToStringFailure()
         {
             CustomList<int> testList = new CustomList<int>();
             //Arrange
@@ -102,6 +102,21 @@ namespace CustomListTests
             actual = testList.ToString();
             //Assert
             Assert.AreNotEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ToString_CompareExistingString_StringToStringSuccess()
+        {
+            CustomList<string> testList = new CustomList<string>();
+            //Arrange
+            string expected;
+            string actual;
+            //Act
+            testList.Add("1");
+            expected = "1";
+            actual = testList[0];
+            //Assert
+            Assert.AreEqual(expected, actual);
         }
 
         //[TestMethod]
