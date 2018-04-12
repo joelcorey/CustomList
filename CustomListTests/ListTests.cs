@@ -63,13 +63,17 @@ namespace CustomListTests
             //Arrange
             CustomList<int> expectedlList = new CustomList<int>();
             CustomList<int> actualList = new CustomList<int>();
+            int expected;
+            int actual;
             //Act
             expectedlList.Add(1);
             actualList.Add(1);
-            actualList.Add(2);
+            actualList.Add(1);
             actualList.Remove(1);
+            expected = expectedlList.Count;
+            actual = actualList.Count;
             //Assert
-            Assert.AreEqual(expectedlList, actualList);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
