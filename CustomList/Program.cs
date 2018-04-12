@@ -59,6 +59,13 @@ namespace CustomList
             CustomList<int> actualList = new CustomList<int>();
 
             expectedlList.Add(1);
+            actualList.Add(1);
+            actualList.Add(1);
+            actualList.Remove(1);
+            Console.WriteLine(expectedlList.Count);
+            Console.WriteLine(actualList.Count);
+
+            Console.ReadKey();
         }
     }
 }
