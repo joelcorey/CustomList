@@ -30,17 +30,17 @@ namespace CustomList
 
             Random random = new Random();
 
-            CustomList<int> testList = new CustomList<int>();
-            CustomList<int> testList2 = new CustomList<int>();
-            CustomList<Lemon> lemonList = new CustomList<Lemon>();
-            CustomList<int> combinedlist;
-            CustomList<int> subtractList;
+            //CustomList<int> testList = new CustomList<int>();
+            //CustomList<int> testList2 = new CustomList<int>();
+            //CustomList<Lemon> lemonList = new CustomList<Lemon>();
+            //CustomList<int> combinedlist;
+            //CustomList<int> subtractList;
 
-            for (int i = 0; i <= 4; i++)
-            {
-                testList.Add(i);
-                testList2.Add(i);
-            }
+            //for (int i = 0; i <= 4; i++)
+            //{
+            //    testList.Add(i);
+            //    testList2.Add(i);
+            //}
             //for (int i = 0; i <= 4; i++)
             //{
             //    Lemon lemon = new Lemon(random);
@@ -51,10 +51,14 @@ namespace CustomList
             //lemonList.Remove(0);
             //Console.WriteLine(testList.ToString());
 
-            combinedlist = testList + testList2;
-            subtractList = testList - testList2;
-            Console.WriteLine(subtractList);
-            Console.ReadLine();
+            //combinedlist = testList + testList2;
+            //subtractList = testList - testList2;
+            //Console.WriteLine(subtractList);
+            //Console.ReadLine();
+            CustomList<int> expectedlList = new CustomList<int>();
+            CustomList<int> actualList = new CustomList<int>();
+
+            expectedlList.Add(1);
         }
     }
 }

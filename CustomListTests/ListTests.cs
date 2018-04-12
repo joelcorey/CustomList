@@ -56,5 +56,32 @@ namespace CustomListTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Remove_RemoveFromList_VerifyRemoveAtIndex()
+        {
+            //Arrange
+            CustomList<int> expectedlList = new CustomList<int>();
+            CustomList<int> actualList = new CustomList<int>();
+            //Act
+            expectedlList.Add(1);
+            actualList.Add(1);
+            actualList.Add(2);
+            actualList.Remove(1);
+            //Assert
+            Assert.AreEqual(expectedlList, actualList);
+        }
+
+        //[TestMethod]
+        //public void NameHere()
+        //{
+        //    CustomList<int> testList = new CustomList<int>();
+        //    //Arrange
+
+        //    //Act
+
+        //    //Assert
+
+        //}
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-     public class CustomList<T> : IEnumerable<T>, IComparable<T>
+     public class CustomList<T> : IEnumerable<T>, IComparable<CustomList<T>>
     {
         private T[] currentArray;
         private int capacity;
@@ -31,14 +31,25 @@ namespace CustomList
             }
         }
 
-        public int CompareTo(T other)
+        public int CompareTo(CustomList<T> other)
         {
-        // compare index value of this.something to other.something? how?
-        // how do you use the indexer with compareto from IComparable<T> to determine which array member is greater than
-        // how do i access the indexer in the compareto method in order to compare two arrays?
-
-        
-        return 1;
+            // Returns:
+            //     A value that indicates the relative order of the objects being compared. The
+            //     return value has the following meanings: Value Meaning Less than zero This object
+            //     is less than the other parameter.Zero This object is equal to other. Greater
+            //     than zero This object is greater than other.
+            if (this.Count == other.Count)
+            {
+                return 0;
+            }
+            else if (this.Count < other.Count)
+            {
+                return -1;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         public int Count
