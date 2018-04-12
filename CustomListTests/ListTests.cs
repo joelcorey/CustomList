@@ -72,6 +72,38 @@ namespace CustomListTests
             Assert.AreEqual(expectedlList, actualList);
         }
 
+        [TestMethod]
+        public void ToString_ConvertIntToString_SuccessfullyConvertToString()
+        {
+            CustomList<int> testList = new CustomList<int>();
+            //Arrange
+            testList.Add(1);
+            testList.Add(2);
+            string expected;
+            string actual;
+            //Act
+            expected = "1, 2";
+            actual = testList.ToString();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ToString_ConvertIntToString_ConvertToStringSuccesComapedToNonString()
+        {
+            CustomList<int> testList = new CustomList<int>();
+            //Arrange
+            testList.Add(1);
+            testList.Add(2);
+            int expected;
+            string actual;
+            //Act
+            expected = 1;
+            actual = testList.ToString();
+            //Assert
+            Assert.AreNotEqual(expected, actual);
+        }
+
         //[TestMethod]
         //public void NameHere()
         //{

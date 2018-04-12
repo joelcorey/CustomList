@@ -28,23 +28,28 @@ namespace CustomList
             //BONUS: ability to sort an instance of my custom-built list class. To be eligible for the bonus points, you may not use Array.Sort() that is already built in and you must tell us what sorting algorithm you used.
             //BONUS: ability to earn bonus points for an EASTER EGG user story, regarding implementing a specific good practice on one of the above methods specified in a user story above.
 
-            Random random = new Random();
+            //Random random = new Random();
 
-            //CustomList<int> testList = new CustomList<int>();
+            CustomList<int> testList = new CustomList<int>();
             //CustomList<int> testList2 = new CustomList<int>();
             //CustomList<Lemon> lemonList = new CustomList<Lemon>();
             //CustomList<int> combinedlist;
             //CustomList<int> subtractList;
 
-            //for (int i = 0; i <= 4; i++)
+            //for (int i = 0; i <= 4000; i++)
             //{
-            //    testList.Add(i);
-            //    testList2.Add(i);
+            //    testList.Add(i);   
             //}
-            //for (int i = 0; i <= 4; i++)
+
+            testList.Add(1);
+            testList.Add(2);
+
+            Console.WriteLine(testList.ToString());
+
+
+            //foreach (var item in testList)
             //{
-            //    Lemon lemon = new Lemon(random);
-            //    lemonList.Add(lemon);
+            //    Console.WriteLine(item);
             //}
 
             //Console.WriteLine("0: " + lemonList[0].Value);
@@ -55,10 +60,14 @@ namespace CustomList
             //subtractList = testList - testList2;
             //Console.WriteLine(subtractList);
             //Console.ReadLine();
-            CustomList<int> expectedlList = new CustomList<int>();
-            CustomList<int> actualList = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>();
+            CustomList<int> actuaList = new CustomList<int>();
 
-            expectedlList.Add(1);
+            expectedList.Add(1);
+            expectedList.Add(1);
+            expectedList.Add(2);
+
+            Console.ReadKey();
         }
     }
 }

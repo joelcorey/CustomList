@@ -126,15 +126,15 @@ namespace CustomList
         }
         public override String ToString()
         {
-            String retVal = String.Empty;
+            String returnValue = String.Empty;
             foreach (T item in this)
             {
-                if (String.IsNullOrEmpty(retVal))
-                    retVal += item.ToString();
+                if (String.IsNullOrEmpty(returnValue))
+                    returnValue += item.ToString();
                 else
-                    retVal += String.Format(", {0}", item);
+                    returnValue += String.Format(", {0}", item);
             }
-            return retVal;
+            return returnValue;
         }
 
         
