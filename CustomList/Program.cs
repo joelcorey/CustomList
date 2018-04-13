@@ -32,7 +32,7 @@ namespace CustomList
 
             CustomList<int> listOne = new CustomList<int>();
             CustomList<int> listTwo = new CustomList<int>();
-            CustomList<int> actual = new CustomList<int>();
+            CustomList<int> combined = new CustomList<int>();
 
             listOne.Add(0);
             listOne.Add(2);
@@ -40,6 +40,9 @@ namespace CustomList
             listTwo.Add(1);
             listTwo.Add(3);
             listTwo.Add(5);
+
+            // Fail:
+            //combined.ZipTwoArrays(listOne, listTwo);
 
             Console.ReadKey();
         }

@@ -121,6 +121,30 @@ namespace CustomList
             currentArray = stagingArray;
         }
 
+        public void ZipTwoArrays(T[] arrayOne, T[] arrayTwo)
+        {
+            T[] stagingArray = new T[count];
+            int stagingCount = 0;
+            int zipper = 0;
+            foreach (var arrayOne_item in arrayOne)
+            {
+                foreach (var arrayTwo_item in arrayTwo)
+                {
+                    if (zipper == 0)
+                    {
+                        stagingArray[stagingCount] = arrayOne_item;
+                        zipper = 1;
+                    }
+                    if (zipper == 1)
+                    {
+                        stagingArray[stagingCount] = arrayTwo_item;
+                        zipper = 0;
+                    }
+                }
+                stagingCount++;
+            }
+            currentArray = stagingArray;
+        }
         public void ResizeArray()
         {
             capacity *= 2;

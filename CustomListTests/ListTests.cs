@@ -144,7 +144,7 @@ namespace CustomListTests
         }
 
         [TestMethod]
-        public void ZipArray_ZipTwoArrays_SuccessfullyZipTwoArrays()
+        public void ZipTwoArrays_ZipTwoArrays_SuccessfullyZipTwoArrays()
         {
             CustomList<int> listOne = new CustomList<int>();
             CustomList<int> listTwo = new CustomList<int>();
