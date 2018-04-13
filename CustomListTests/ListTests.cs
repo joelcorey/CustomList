@@ -123,6 +123,21 @@ namespace CustomListTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ReverseArray_ReverseArray_ArrayReversed()
+        {
+            //Arrange
+            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> actual = new CustomList<int>();
+            //Act
+            expected.Add(2);
+            expected.Add(1);
+            actual.Add(1);
+            actual.Add(2);
+            //Assert
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
         //[TestMethod]
         //public void NameHere()
         //{
