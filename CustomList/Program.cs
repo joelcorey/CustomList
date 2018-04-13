@@ -30,42 +30,17 @@ namespace CustomList
 
             //Random random = new Random();
 
-            CustomList<int> testList = new CustomList<int>();
-            //CustomList<int> testList2 = new CustomList<int>();
-            //CustomList<Lemon> lemonList = new CustomList<Lemon>();
-            //CustomList<int> combinedlist;
-            //CustomList<int> subtractList;
+            
+            CustomList<int> listBackward = new CustomList<int>();
 
-            //for (int i = 0; i <= 4000; i++)
-            //{
-            //    testList.Add(i);   
-            //}
-
-            testList.Add(1);
-            testList.Add(2);
-
-            Console.WriteLine(testList.ToString());
-
-
-            //foreach (var item in testList)
-            //{
-            //    Console.WriteLine(item);
-            //}
-
-            //Console.WriteLine("0: " + lemonList[0].Value);
-            //lemonList.Remove(0);
-            //Console.WriteLine(testList.ToString());
-
-            //combinedlist = testList + testList2;
-            //subtractList = testList - testList2;
-            //Console.WriteLine(subtractList);
-            //Console.ReadLine();
-            CustomList<int> expectedList = new CustomList<int>();
-            CustomList<int> actuaList = new CustomList<int>();
-
-            expectedList.Add(1);
-            expectedList.Add(1);
-            expectedList.Add(2);
+            listBackward.Add(1);
+            listBackward.Add(2);
+            listBackward.Reverse();
+            
+            foreach (var item in listBackward)
+            {
+                Console.WriteLine(item);
+            }
 
 
             Console.ReadKey();

@@ -127,15 +127,20 @@ namespace CustomListTests
         public void ReverseArray_ReverseArray_ArrayReversed()
         {
             //Arrange
-            CustomList<int> expected = new CustomList<int>();
-            CustomList<int> actual = new CustomList<int>();
+            CustomList<int> listForward = new CustomList<int>();
+            CustomList<int> listBackward = new CustomList<int>();
+            int expected;
+            int actual;
             //Act
-            expected.Add(2);
-            expected.Add(1);
-            actual.Add(1);
-            actual.Add(2);
+            listForward.Add(1);
+            listForward.Add(2);
+            listBackward.Add(2);
+            listBackward.Add(1);
+            listBackward.Reverse();
+            expected = listForward[0];
+            actual = listBackward[0];
             //Assert
-            CollectionAssert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual);
         }
 
         //[TestMethod]

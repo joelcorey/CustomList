@@ -106,6 +106,21 @@ namespace CustomList
             currentArray = stagingArray;
         }
 
+        public void Reverse()
+        {
+            T[] stagingArray = new T[capacity];
+            int j = 0;
+            for (int i = capacity; i >= 0; i--)
+            {
+                if (i < count)
+                {
+                    stagingArray[j] = currentArray[i];
+                    j++;
+                }
+            }
+            currentArray = stagingArray;
+        }
+
         public void ResizeArray()
         {
             capacity *= 2;
