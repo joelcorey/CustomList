@@ -30,18 +30,16 @@ namespace CustomList
 
             //Random random = new Random();
 
-            
-            CustomList<int> listBackward = new CustomList<int>();
+            CustomList<int> listOne = new CustomList<int>();
+            CustomList<int> listTwo = new CustomList<int>();
+            CustomList<int> actual = new CustomList<int>();
 
-            listBackward.Add(1);
-            listBackward.Add(2);
-            listBackward.Reverse();
-            
-            foreach (var item in listBackward)
-            {
-                Console.WriteLine(item);
-            }
-
+            listOne.Add(0);
+            listOne.Add(2);
+            listOne.Add(4);
+            listTwo.Add(1);
+            listTwo.Add(3);
+            listTwo.Add(5);
 
             Console.ReadKey();
         }

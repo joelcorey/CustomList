@@ -143,6 +143,33 @@ namespace CustomListTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ZipArray_ZipTwoArrays_SuccessfullyZipTwoArrays()
+        {
+            CustomList<int> listOne = new CustomList<int>();
+            CustomList<int> listTwo = new CustomList<int>();
+            CustomList<int> actual = new CustomList<int>();
+            CustomList<int> expected = new CustomList<int>();
+            
+            //Arrange
+            listOne.Add(0);
+            listOne.Add(2);
+            listOne.Add(4);
+            listTwo.Add(1);
+            listTwo.Add(3);
+            listTwo.Add(5);
+            expected.Add(0);
+            expected.Add(1);
+            expected.Add(2);
+            expected.Add(3);
+            expected.Add(4);
+            expected.Add(5);
+            //Act
+            actual.Zip(listOne, listTwo);
+            //Assert
+            CollectionAssert.AreEquivalent(expected, actual);
+        }
+
         //[TestMethod]
         //public void NameHere()
         //{
